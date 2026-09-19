@@ -1,0 +1,13 @@
+# Render 정적 사이트 배포 설정 (Infrastructure as Code)
+# 이 파일이 저장소 루트에 있으면 Render가 자동으로 정적 사이트로 인식합니다.
+# 참고: 정적 HTML/CSS/JS 이므로 빌드 과정이 필요 없습니다.
+services:
+  - type: web
+    name: game0919
+    runtime: static
+    # 빌드 단계 없음 (정적 파일 그대로 서빙)
+    buildCommand: ""
+    # 정적 파일이 저장소 루트에 있으므로 게시 경로는 "."
+    staticPublishPath: .
+    # SPA가 아니므로 별도 라우팅 규칙 불필요
+    pullRequestPreviewsEnabled: false
