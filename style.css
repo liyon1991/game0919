@@ -122,7 +122,8 @@ a {
 .info-card,
 .report-hero,
 .report-section,
-.game-card {
+.game-card,
+.game-card-inline {
   background: rgba(20, 30, 46, 0.9);
   border: 1px solid var(--border);
   border-radius: 24px;
@@ -238,6 +239,14 @@ a {
   font-weight: 700;
 }
 
+.report-block {
+  margin-top: 18px;
+}
+
+.report-block p {
+  margin-bottom: 10px;
+}
+
 .report-hero,
 .report-section {
   padding: 28px 28px 22px;
@@ -291,7 +300,8 @@ ul {
   justify-content: center;
 }
 
-.game-card {
+.game-card,
+.game-card-inline {
   width: min(100%, 720px);
   padding: 28px 22px 24px;
   text-align: center;
@@ -312,6 +322,10 @@ ul {
   border-radius: 12px;
   font-size: 0.95rem;
   margin-bottom: 16px;
+}
+
+.hud.small {
+  margin-top: 18px;
 }
 
 .hud strong { color: var(--accent-strong); }
@@ -372,7 +386,8 @@ button:active { transform: translateY(1px); }
   .info-card,
   .report-hero,
   .report-section,
-  .game-card {
+  .game-card,
+  .game-card-inline {
     border-radius: 18px;
   }
 

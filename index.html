@@ -17,13 +17,13 @@
       </div>
 
       <nav class="main-nav" aria-label="메인 메뉴">
-        <a href="index.html" class="active">홈</a>
-        <a href="report.html">보고서</a>
-        <a href="game.html">게임</a>
+        <a href="#home" class="active">홈</a>
+        <a href="#report">보고서</a>
+        <a href="#game">게임</a>
       </nav>
     </header>
 
-    <main class="home-container">
+    <main class="home-container" id="home">
       <section class="hero">
         <div class="hero-copy">
           <p class="eyebrow">2025 부동산 시장분석</p>
@@ -34,8 +34,8 @@
           </p>
 
           <div class="cta-row">
-            <a class="btn primary" href="report.html">보고서 보기</a>
-            <a class="btn secondary" href="game.html">게임 시작</a>
+            <a class="btn primary" href="#report">보고서 보기</a>
+            <a class="btn secondary" href="#game">게임 시작</a>
           </div>
         </div>
 
@@ -56,24 +56,77 @@
       </section>
 
       <section class="info-grid">
-        <article class="info-card">
+        <article class="info-card" id="report">
           <h2>보고서</h2>
           <p>
             국토부 실거래와 자치구 집계 정보를 바탕으로 대상 단지의 시장 흐름과
             해석을 한눈에 볼 수 있도록 정리했습니다.
           </p>
-          <a href="report.html">보고서 상세 보기 →</a>
+          <div class="report-block">
+            <p><strong>1. 개요</strong></p>
+            <table>
+              <tr><th>분석 대상</th><td>천왕역모아엘가트레뷰 (서울시 구로구 오류동)</td></tr>
+              <tr><th>분석 기간</th><td>2025.01.01 ~ 2025.12.31</td></tr>
+              <tr><th>주 데이터</th><td>국토교통부 아파트 실거래가 자료</td></tr>
+              <tr><th>보조 데이터</th><td>자치구별 파생 지표 데이터</td></tr>
+            </table>
+          </div>
+          <div class="report-block">
+            <p><strong>2. 실거래 현황</strong></p>
+            <table>
+              <thead>
+                <tr>
+                  <th>계약일</th>
+                  <th>전용면적</th>
+                  <th>거래금액</th>
+                  <th>㎡당 단가</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr><td>2025.07.31</td><td>84.89㎡</td><td>9억 8,000만</td><td>1,154.4만원/㎡</td></tr>
+                <tr><td>2025.09.24</td><td>84.54㎡</td><td>10억 4,500만</td><td>1,236.1만원/㎡</td></tr>
+                <tr><td>2025.11.21</td><td>84.54㎡</td><td>9억 7,830만</td><td>1,157.2만원/㎡</td></tr>
+                <tr><td>2025.12.30</td><td>67.96㎡</td><td>8억 1,500만</td><td>1,199.2만원/㎡</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="report-block">
+            <p><strong>3. 종합</strong></p>
+            <ul>
+              <li>2025년 단지 실거래는 4건으로 확인되었고, 84㎡대는 약 9.78~10.45억 수준입니다.</li>
+              <li>구로구 평균 대비 상회 수준이지만 표본이 적어 추세 판단은 유보됩니다.</li>
+              <li>세대수·준공·교통 정보는 추가 공식 자료 확인이 필요합니다.</li>
+            </ul>
+          </div>
         </article>
 
-        <article class="info-card">
+        <article class="info-card" id="game">
           <h2>게임</h2>
           <p>
             브레이크아웃형 게임으로, 과제 발표를 보조하는 간단한 인터랙티브 도구를
             연결했습니다. 바로 플레이할 수 있습니다.
           </p>
-          <a href="game.html">게임 페이지 이동 →</a>
+
+          <div class="game-card-inline">
+            <div class="hud small">
+              <span>점수: <strong id="score">0</strong></span>
+              <span>남은 공: <strong id="lives">3</strong></span>
+              <span>레벨: <strong id="level">1</strong></span>
+            </div>
+
+            <canvas id="board" width="480" height="560"></canvas>
+
+            <div class="controls">
+              <button id="startBtn" type="button">시작 / 재시작</button>
+              <p class="hint">← → 키, 마우스, 또는 터치로 패들을 움직이세요.</p>
+            </div>
+
+            <p id="message" class="message" role="status" aria-live="polite"></p>
+          </div>
         </article>
       </section>
     </main>
+
+    <script src="game.js"></script>
   </body>
 </html>
