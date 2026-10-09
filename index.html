@@ -1,31 +1,79 @@
 <!DOCTYPE html>
 <html lang="ko">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-  <title>벽돌깨기 게임</title>
-  <link rel="stylesheet" href="style.css" />
-</head>
-<body>
-  <main class="wrap">
-    <h1>벽돌깨기</h1>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>천왕역 모아엘가 | 프로젝트 홈</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body class="page-home">
+    <header class="topbar">
+      <div class="brand-wrap">
+        <div class="brand-mark">M</div>
+        <div>
+          <div class="brand-name">천왕역 모아엘가</div>
+          <div class="brand-sub">시장분석 프로젝트</div>
+        </div>
+      </div>
 
-    <div class="hud">
-      <span>점수: <strong id="score">0</strong></span>
-      <span>남은 공: <strong id="lives">3</strong></span>
-      <span>레벨: <strong id="level">1</strong></span>
-    </div>
+      <nav class="main-nav" aria-label="메인 메뉴">
+        <a href="index.html" class="active">홈</a>
+        <a href="report.html">보고서</a>
+        <a href="game.html">게임</a>
+      </nav>
+    </header>
 
-    <canvas id="board" width="480" height="560"></canvas>
+    <main class="home-container">
+      <section class="hero">
+        <div class="hero-copy">
+          <p class="eyebrow">2025 부동산 시장분석</p>
+          <h1>천왕역 모아엘가<br />분석 보고서와 미니게임</h1>
+          <p class="lead">
+            본 프로젝트는 구로구 오류동 지역의 시장 특성과 실거래 데이터를 기반으로
+            시장성을 정리하고, 사용자가 함께 즐길 수 있는 웹 기반 미니게임으로 연결됩니다.
+          </p>
 
-    <div class="controls">
-      <button id="startBtn" type="button">시작 / 재시작</button>
-      <p class="hint">← → 키, 마우스, 또는 터치로 패들을 움직이세요.</p>
-    </div>
+          <div class="cta-row">
+            <a class="btn primary" href="report.html">보고서 보기</a>
+            <a class="btn secondary" href="game.html">게임 시작</a>
+          </div>
+        </div>
 
-    <p id="message" class="message" role="status" aria-live="polite"></p>
-  </main>
+        <div class="hero-panel">
+          <div class="stat-card">
+            <span class="label">실거래 건수</span>
+            <strong>4건</strong>
+          </div>
+          <div class="stat-card">
+            <span class="label">84㎡대 거래가</span>
+            <strong>9.78~10.45억</strong>
+          </div>
+          <div class="stat-card">
+            <span class="label">구로구 평균 대비</span>
+            <strong>상회</strong>
+          </div>
+        </div>
+      </section>
 
-  <script src="game.js"></script>
-</body>
+      <section class="info-grid">
+        <article class="info-card">
+          <h2>보고서</h2>
+          <p>
+            국토부 실거래와 자치구 집계 정보를 바탕으로 대상 단지의 시장 흐름과
+            해석을 한눈에 볼 수 있도록 정리했습니다.
+          </p>
+          <a href="report.html">보고서 상세 보기 →</a>
+        </article>
+
+        <article class="info-card">
+          <h2>게임</h2>
+          <p>
+            브레이크아웃형 게임으로, 과제 발표를 보조하는 간단한 인터랙티브 도구를
+            연결했습니다. 바로 플레이할 수 있습니다.
+          </p>
+          <a href="game.html">게임 페이지 이동 →</a>
+        </article>
+      </section>
+    </main>
+  </body>
 </html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>천왕역 모아엘가 | 게임</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body class="page-game">
+    <header class="topbar">
+      <div class="brand-wrap">
+        <div class="brand-mark">M</div>
+        <div>
+          <div class="brand-name">천왕역 모아엘가</div>
+          <div class="brand-sub">게임 페이지</div>
+        </div>
+      </div>
+
+      <nav class="main-nav" aria-label="메인 메뉴">
+        <a href="index.html">홈</a>
+        <a href="report.html">보고서</a>
+        <a href="game.html" class="active">게임</a>
+      </nav>
+    </header>
+
+    <main class="game-shell">
+      <section class="game-card">
+        <h1>벽돌깨기</h1>
+
+        <div class="hud">
+          <span>점수: <strong id="score">0</strong></span>
+          <span>남은 공: <strong id="lives">3</strong></span>
+          <span>레벨: <strong id="level">1</strong></span>
+        </div>
+
+        <canvas id="board" width="480" height="560"></canvas>
+
+        <div class="controls">
+          <button id="startBtn" type="button">시작 / 재시작</button>
+          <p class="hint">← → 키, 마우스, 또는 터치로 패들을 움직이세요.</p>
+        </div>
+
+        <p id="message" class="message" role="status" aria-live="polite"></p>
+      </section>
+    </main>
+
+    <script src="game.js"></script>
+  </body>
+</html>
